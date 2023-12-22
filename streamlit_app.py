@@ -11,7 +11,7 @@ import ast
 translator = Translator()
 st.set_page_config()
 root = Path("data")
-embeddings = HuggingFaceEmbeddings(model_name="data/all-mpnet-base-v2")
+embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 db = FAISS.load_local(root.joinpath("body_parts").__str__(), embeddings)
 st.title('五音堂选穴仪')
 meridians = st.multiselect(
