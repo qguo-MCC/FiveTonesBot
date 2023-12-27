@@ -25,7 +25,7 @@ if task == '建议穴位':
     parts_text = st.text_input('请列出患病部位。如果有多个部位，请用，分开不同部位。')
 
     #parts = st.multiselect('病痛部位(可以多选)：',data.columns[25:].to_list())
-    n = st.text_input('建议学位数量', '3')
+    n = st.text_input('建议穴位数量', '3')
     N = int(n)
     if st.button('选穴'):
         conn = st.connection('data_db', type='sql')
