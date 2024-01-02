@@ -18,6 +18,7 @@ if task == '建议穴位':
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     db = FAISS.load_local(root.joinpath("body_parts").__str__(), embeddings)
     st.title('五音堂选穴仪')
+    st.header('郭原')
     meridians = st.multiselect(
         '患病经络(可以多选)：',
         ['肺经', '大肠经', '胃经', '脾经', '心经', '小肠经', '膀胱经小趾外侧线', '膀胱经小趾内侧线', '肾经前线', '肾经后线', '心包经', '三焦经', '胆经前线', '胆经后线', '肝经', '督脉', '任脉'],
